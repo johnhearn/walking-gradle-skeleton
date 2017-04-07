@@ -1,0 +1,8 @@
+*** Settings ***
+Library           Process
+
+*** Test Cases ***
+Basic usage
+    ${result} =    Run Process   java   -jar   target${/}project.jar
+    Should Be Equal As Integers    ${result.rc}    0
+    
